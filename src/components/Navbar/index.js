@@ -1,7 +1,8 @@
 import React from "react";
 import { Link as LinkR } from "react-router-dom";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { DiCssdeck } from "react-icons/di";
+import { FaBars } from "react-icons/fa";
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -40,7 +41,7 @@ const NavLogo = styled(LinkR)`
   }
 `;
 
-export const MobileIcon = styled.div`
+const MobileIcon = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
     display: block;
@@ -122,7 +123,44 @@ const Span = styled.div`
   font-size: 18px;
 `;
 
+const MobileMenuLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 100%;
+  padding: 12px 40px 24px 40px;
+  background: ${({ theme }) => theme.card_light + 99};
+  transition: all 0.3s ease-in-out;
+  transform: ${({ open }) => (open ? "translateY(0)" : "translateY(100%)")};
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 5 10px  rgba(0, 0, 0, 0.3;
+  opacity: ${({ open }) => (open ? "1" : "0")};
+  z-index: ${({ open }) => (open ? "1" : "-1")};
+`;
+
+export const MobileLink = styled(LinkR)`
+  color: ${({ theme }) => theme.text_primary};
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  :hover {
+    color: ${({ theme }) => theme.primary};
+  }
+
+  // &.active {
+  //   border-bottom: 2px solid ${({ theme }) => theme.primary};
+  // }
+`;
+
 const Navbar = () => {
+  const [open, setOpen] = React.useState(false);
+  const theme = useTheme();
+
   return (
     <Nav>
       <NavContainer>
@@ -139,7 +177,13 @@ const Navbar = () => {
             <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
           </a>
         </NavLogo>
-        <MobileIcon></MobileIcon>
+        <MobileIcon>
+          <FaBars
+            onClick={() => {
+              setOpen(!open);
+            }}
+          />
+        </MobileIcon>
         <NavItems>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
@@ -151,6 +195,62 @@ const Navbar = () => {
           <GitHubButton>Github Profile</GitHubButton>
         </ButtonContainer>
       </NavContainer>
+      {open && (
+        <MobileMenuLinks open={open}>
+          <MobileLink
+            href="#about"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            About
+          </MobileLink>
+          <MobileLink
+            href="#skills"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            Skills
+          </MobileLink>
+          <MobileLink
+            href="#experience"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            Experience
+          </MobileLink>
+          <MobileLink
+            href="#projects"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            Projects
+          </MobileLink>
+          <MobileLink
+            href="#education"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            Education
+          </MobileLink>
+          <GitHubButton
+            style={{
+              padding: "10px 16px",
+              background: `${theme.primary}`,
+              color: "white",
+              width: "max-content",
+            }}
+            href="/"
+            target="_blank"
+          >
+            Github Profile
+          </GitHubButton>
+        </MobileMenuLinks>
+      )}
     </Nav>
   );
 };
