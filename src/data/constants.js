@@ -3,9 +3,8 @@ export const Bio = {
   roles: ["Full Stack Developer", "Programmer", "Linux enthusiast"],
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
-  github: "https://github.com/rishavchanda",
-  resume:
-    "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbqpV7ADNaETA/view?usp=sharing",
+  github: "https://github.com/ankit705yadav",
+  resume: "https://drive.google.com/",
   linkedin: "https://www.linkedin.com/in/ankit705yadav/",
   twitter: "https://twitter.com/ankit705yadav",
   Github: "https://www.github.com/ankit705yadav/",
