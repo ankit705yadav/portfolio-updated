@@ -9,6 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 import Experience from "./components/Experience";
 import { useState } from "react";
 import Projects from "./components/Projects";
+import ProjectDetails from "./components/ProjectDetails";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -46,6 +47,14 @@ function App() {
             <Experience />
           </Wrapper>
           <Projects openModal={openModal} setOpenModal={setOpenModal} />
+          {/* <Wrapper>
+            <Education />
+            <Contact />
+          </Wrapper>
+          <Footer /> */}
+          {openModal.state && (
+            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+          )}
         </Body>
       </BrowserRouter>
     </ThemeProvider>
