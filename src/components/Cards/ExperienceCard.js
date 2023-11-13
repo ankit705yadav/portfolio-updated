@@ -81,6 +81,40 @@ const Duration = styled.div`
   }
 `;
 
+const Description = styled.div`
+  width: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: ${({ theme }) => theme.text_primary + 99};
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
+
+const Skills = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+`;
+
+const ItemWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+`;
+
+const Skill = styled.div`
+  font-size: 15px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary + 99};
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
+
 const ExperienceCard = ({ experience }) => {
   return (
     <Card>
@@ -92,7 +126,22 @@ const ExperienceCard = ({ experience }) => {
           <Duration>{experience.date}</Duration>
         </Body>
       </Top>
-      {/* <Description></Description> */}
+      <Description>
+        {experience.desc}
+        {experience?.skills && (
+          <>
+            <br />
+            <Skills>
+              <b>Skills:</b>
+              <ItemWrapper>
+                {experience.skills.map((skill) => (
+                  <Skill>! {skill}</Skill>
+                ))}
+              </ItemWrapper>
+            </Skills>
+          </>
+        )}
+      </Description>
       {/* {experience.doc && (
         <a href={experience.doc} target="new">
           <Document />
