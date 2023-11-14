@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
+import Contact from "./components/Contact";
 import { BrowserRouter } from "react-router-dom";
 import Experience from "./components/Experience";
 import { useState } from "react";
@@ -49,7 +50,7 @@ function App() {
           <Projects openModal={openModal} setOpenModal={setOpenModal} />
           <Wrapper>
             <Education />
-            {/* <Contact /> */}
+            <Contact />
           </Wrapper>
           {/* <Footer /> */}
           {openModal.state && (
