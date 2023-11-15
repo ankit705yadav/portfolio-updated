@@ -143,7 +143,7 @@ const MobileMenuLinks = styled.div`
   z-index: ${({ open }) => (open ? "1" : "-1")};
 `;
 
-export const MobileLink = styled(LinkR)`
+export const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -159,7 +159,7 @@ export const MobileLink = styled(LinkR)`
 `;
 
 const Navbar = () => {
-  const [open, setOpen] = React.useState(false);
+  const [Open, setOpen] = React.useState(false);
   const theme = useTheme();
 
   return (
@@ -181,7 +181,7 @@ const Navbar = () => {
         <MobileIcon>
           <FaBars
             onClick={() => {
-              setOpen(!open);
+              setOpen(!Open);
             }}
           />
         </MobileIcon>
@@ -198,12 +198,12 @@ const Navbar = () => {
           </GitHubButton>
         </ButtonContainer>
       </NavContainer>
-      {open && (
-        <MobileMenuLinks open={open}>
+      {Open && (
+        <MobileMenuLinks open={Open}>
           <MobileLink
             href="#about"
             onClick={() => {
-              setOpen(!open);
+              setOpen(!Open);
             }}
           >
             About
@@ -211,7 +211,7 @@ const Navbar = () => {
           <MobileLink
             href="#skills"
             onClick={() => {
-              setOpen(!open);
+              setOpen(!Open);
             }}
           >
             Skills
@@ -219,7 +219,7 @@ const Navbar = () => {
           <MobileLink
             href="#experience"
             onClick={() => {
-              setOpen(!open);
+              setOpen(!Open);
             }}
           >
             Experience
@@ -227,7 +227,7 @@ const Navbar = () => {
           <MobileLink
             href="#projects"
             onClick={() => {
-              setOpen(!open);
+              setOpen(!Open);
             }}
           >
             Projects
@@ -235,7 +235,7 @@ const Navbar = () => {
           <MobileLink
             href="#education"
             onClick={() => {
-              setOpen(!open);
+              setOpen(!Open);
             }}
           >
             Education
@@ -247,7 +247,7 @@ const Navbar = () => {
               color: "white",
               width: "max-content",
             }}
-            href="/"
+            href="https://github.com/ankit705yadav"
             target="_blank"
           >
             Github Profile
