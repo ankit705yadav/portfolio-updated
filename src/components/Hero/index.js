@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
-import HeroImg from "../../images/thorfinnProfile.jpg";
+import HeroImg from "../../images/ankit.jpeg";
 import HeroBgAnimation from "../HeroBgAnimation";
 
 const HeroContainer = styled.div`
@@ -192,7 +192,7 @@ const Image = styled.img`
   height: 100%;
   max-width: 400px;
   max-height: 400px;
-  border-radius: 40%;
+  border-radius: 50%;
   object-position: center;
   border: 2px solid ${({ theme }) => theme.primary};
 
