@@ -5,7 +5,7 @@ export const Bio = {
     "Eager and adaptable, I'm an individual who thrives on embracing new challenges. Fueled by a passion for continuous learning, I am committed to delivering high-quality results. With a positive attitude and a growth mindset, I am poised to make a meaningful contribution and achieve remarkable milestones in every endeavor.",
   github: "https://github.com/ankit705yadav/",
   resume:
-    "https://drive.google.com/file/d/1kDqOKvUznAlrUHPPkPogMkUE5vaeds6H/view?usp=sharing",
+    "https://drive.google.com/file/d/1lMXIP2_-Fas2UADC9yCYmudVxmzep8hn/view?usp=drivesdk",
   linkedin: "https://www.linkedin.com/in/ankit705yadav/",
   twitter: "https://twitter.com/ankit705yadav",
   Github: "https://www.github.com/ankit705yadav/",
