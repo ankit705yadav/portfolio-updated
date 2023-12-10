@@ -213,7 +213,7 @@ export const projects = [
     title:"Reps",
     date:"Nov 2023 - Dec 2023",
     description:"Developed a MERN stack workout tracking app, enabling users to log, monitor, and achieve fitness goals. Integrated MongoDB, Express.js, React.js, and Node.js for a responsive and user-friendly experience.",
-    img:"https://github.com/ankit705yadav/portfolio-updated/assets/90278910/5df47510-1d7f-4c51-b86b-be484e13dd73",
+    img:"https://github.com/ankit705yadav/portfolio-updated/assets/90278910/9ef760e1-81d0-4f32-b7a6-99c425ece0a9",
     tags:["Mongo DB", "Express Js", "React", "Node Js"],
     category: "Web Application",
     github: "https://github.com/ankit705yadav/reps",
